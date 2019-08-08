@@ -8,6 +8,8 @@
   <filter-mapping>
     <filter-name>encodings</filter-name>
     <url-pattern>/*</url-pattern>
+     <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
   </filter-mapping>
   <filter>
     <filter-name>register</filter-name>
@@ -15,7 +17,9 @@
   </filter>
   <filter-mapping>
     <filter-name>register</filter-name>
-    <url-pattern>/path/*</url-pattern>
+    <url-pattern>/page/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
   </filter-mapping>
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
